@@ -61,6 +61,7 @@ export default class SignUp extends Component {
           if(this.props.userId.isAuthenticated === true) {
             this.props.history.push('/menu');
           } else if(this.props.signUpResponse.isSignedUp === false) {
+            // eslint-disable-next-line no-undef
             Materialize.toast(this.props.signUpResponse.error.response.data, 2000, 'red rounded');
           }
         }, 1000);
