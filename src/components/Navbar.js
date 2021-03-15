@@ -8,13 +8,18 @@ export default class Navbar extends Component {
     render() {
         return (
             <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-                <Link to='/'>
+                <Link to='/menu'>
                   <i class="fas fa-store navbar-brand"></i>
                 </Link>
                 <ul className="navbar-nav align-items-center">
                     <li className="nav-item ml-5">
-                        <Link to="/" className="nav-link">
+                        <Link to="/menu" className="nav-link">
                             Menu
+                        </Link>
+                    </li>              
+                    <li className="nav-item ml-5">
+                        <Link to="/profile" className="nav-link">
+                            My Profile
                         </Link>
                     </li>              
                 </ul>

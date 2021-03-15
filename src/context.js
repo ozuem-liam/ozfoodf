@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+import { createStore, applyMiddleware } from 'redux';
 import {storeProducts, detailProduct} from './data';
+
+
+const store = createStore(() => [], {}, applyMiddleware());
 
 const ProductContext = React.createContext();
 //Provider
@@ -31,12 +35,10 @@ class ProductProvider extends Component {
             return { products: tempProducts}
         })
     };
-
     getItem = (id) => {
         const product = this.state.products.find(item => item.id === id);
         return product;
     }
-
     handleDetail = (id) =>{
         const product = this.getItem(id);
         this.setState(() => {
@@ -169,4 +171,4 @@ class ProductProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export {ProductProvider, ProductConsumer };
+export {ProductProvider, ProductConsumer, store };

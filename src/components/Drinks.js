@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import Menu from './Menu';
 import {ProductConsumer} from '../context';
 import Title from './Title';
-export default class MenuList extends Component {
+
+export default class Drinks extends Component {
  
     render() {
         return (
             <React.Fragment>
                 <div className="py-5">
                     <div className="container">
-                        <Title name="OzFood" title="Food" />
+                        <Title name="OzFood" title="Drinks" />
                         <div className="row">
                             <ProductConsumer>
                                 {value=>{
